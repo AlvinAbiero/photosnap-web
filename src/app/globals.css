@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Custom gradient variables */
+    --gradient-lin-grad: linear-gradient(
+      27deg,
+      #ffc593 0%,
+      #bc7198 43.29%,
+      #5a77ff 83.33%
+    );
+    --gradient-fb: linear-gradient(27deg, #63afdb 0%, #6028f1 100%);
+    --gradient-yt: linear-gradient(0deg, #d3205a 0%, #ff5a5a 100%);
+    --gradient-x: linear-gradient(27deg, #65ffeb 0%, #27718a 100%);
+    --gradient-pin: linear-gradient(27deg, #f6c683 0%, #de3838 100%);
+    --gradient-ig: linear-gradient(
+      27deg,
+      #ffc593 0%,
+      #bc7198 51.945%,
+      #5a77ff 100%
+    );
+  }
+
+  /* Font family */
+  html {
+    font-family: Dm Sans, sans-serif;
+    font-size: 80%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Font family utilities */
+  .font-dm-sans {
+    font-family: var(--font-dm-sans), sans-serif;
+  }
+
+  /* Background gradient utilities */
+  .bg-lin-grad {
+    background-image: var(--gradient-lin-grad);
+  }
+
+  .bg-fb {
+    background-image: var(--gradient-fb);
+  }
+
+  .bg-yt {
+    background-image: var(--gradient-yt);
+  }
+
+  .bg-x {
+    background-image: var(--gradient-x);
+  }
+
+  .bg-pin {
+    background-image: var(--gradient-pin);
+  }
+
+  .bg-ig {
+    background-image: var(--gradient-ig);
+  }
+}
+
+.rotate {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.not-rotate {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10rem);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loader {
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(#000 0 0) left -40px top 0/40px 100% no-repeat #eee;
+  -webkit-mask: conic-gradient(from 90deg at 5px 5px, #0000 25%, #000 0) 0 0 /
+    calc((100% - 5px) / 5) calc(100% - 5px);
+  animation: l10 1s infinite linear;
+}
+
+@keyframes l10 {
+  100% {
+    background-position: right -40px top 0;
+  }
 }

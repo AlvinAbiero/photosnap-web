@@ -1,12 +1,11 @@
-"use client";
+import React from "react";
 import { Suspense, lazy } from "react";
 import { AnimatePresence } from "framer-motion";
 import Loader from "@/components/Loader";
-import "./globals.css";
 
-const Page = lazy(() => import("@/components/Home"));
+const Page = lazy(() => import("@/components/Pricing"));
 
-export default function Home() {
+const PricingPage = () => {
   return (
     <AnimatePresence mode="wait">
       <Suspense fallback={<Loader />}>
@@ -14,4 +13,6 @@ export default function Home() {
       </Suspense>
     </AnimatePresence>
   );
-}
+};
+
+export default PricingPage;
