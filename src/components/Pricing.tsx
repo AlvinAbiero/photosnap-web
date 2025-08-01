@@ -1,7 +1,17 @@
-import React from "react";
+import FeaturesCta from "./FeaturesCta";
+import PricingComparison from "./PricingComparison";
+import PricingHero from "./PricingHero";
+import PricingPlans from "./PricingPlans";
 
 const Pricing = () => {
-  return <div>Pricing</div>;
+  return (
+    <div>
+      <PricingHero />
+      <PricingPlans />
+      <PricingComparison />
+      <FeaturesCta />
+    </div>
+  );
 };
 
 export default Pricing;

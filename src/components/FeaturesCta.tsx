@@ -30,7 +30,7 @@ const FeaturesCta = () => {
   return (
     <section
       style={{ backgroundImage: bgImage }}
-      className="relative flex md:items-center items-start md:flex-row flex-col md:justify-between gap-10 bg-repeat-round lg:px-44 lg:py-36 text-white px-8 py-[7rem] md:px-16 lg:px-24 xl:px-36 h-full"
+      className="relative flex md:items-center items-start md:flex-row flex-col md:justify-between gap-10 bg-repeat-round xl:py-36 lg:py-36 text-white px-8 py-[7rem] md:px-16 lg:px-24 xl:px-36 h-full"
     >
       <Reveal>
         <h2 className="lg:text-[4rem] font-bold uppercase leading-[4.8rem] tracking-[0.4167rem] text-[3.2rem] ">
