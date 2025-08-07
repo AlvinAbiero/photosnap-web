@@ -1,3 +1,4 @@
+"use client";
 import StoriesSection from "./StoriesSection";
 import StoriesHero from "./StoriesHero";
 

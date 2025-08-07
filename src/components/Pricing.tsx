@@ -1,3 +1,4 @@
+"use client";
 import FeaturesCta from "./FeaturesCta";
 import PricingComparison from "./PricingComparison";
 import PricingHero from "./PricingHero";
